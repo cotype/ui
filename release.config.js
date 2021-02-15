@@ -7,7 +7,7 @@ module.exports = {
       "decorate-gh-pr/on-release",
       {
         comment:
-          "<hr /><p><em><date>[<% print(date.toISOString()) %>]</date></em> Pre-released:<br /><code>@cotype/core@<%= version %></code></p>"
+          "<hr /><p><em><date>[<% print(date.toISOString()) %>]</date></em> Pre-released:<br /><code>@cotype/ui@<%= version %></code></p>"
       }
     ],
     !process.env.PRE_RELEASE && "@semantic-release/github"
