@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "UI Components for cotype Admin UI",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "build": "rm -rf lib/ && tsc",
