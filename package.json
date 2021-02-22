@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .ts,.tsx",
     "lint-fix": "eslint . --ext .ts,.tsx --fix",
     "storybook": "start-storybook -p 6006 -s storybookPublic",
-    "build-storybook": "build-storybook -s storybookPublic"
+    "build-storybook": "rm -rf docs && rm -rf storybook-static && build-storybook -s storybookPublic && mv storybook-static docs"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
