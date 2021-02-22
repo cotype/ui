@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { PopoverMenu } from './index';
+import { PopoverMenu, PopoverMenuItem, PopoverMenuMenu } from './index';
 import { Align, Position } from 'react-tiny-popover';
 
 export default {
@@ -26,10 +26,6 @@ const FlexCol = styled.div`
     margin-bottom: 20px;
   }
 `;
-const Menu = styled.div`
-  padding: 20px;
-  background: red;
-`;
 
 export const Default: FC<{ position?: Position; align?: Align }> = ({
   position,
@@ -39,9 +35,10 @@ export const Default: FC<{ position?: Position; align?: Align }> = ({
     <div>
       <PopoverMenu
         renderMenu={(close) => (
-          <Menu>
-            <button onClick={close}>Schließen</button>
-          </Menu>
+          <PopoverMenuMenu>
+            <PopoverMenuItem onClick={close}>close this window</PopoverMenuItem>
+            <PopoverMenuItem onClick={close}>and more...</PopoverMenuItem>
+          </PopoverMenuMenu>
         )}
         position={position}
         align={align}

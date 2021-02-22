@@ -2,7 +2,7 @@ import React, { Component, PropsWithChildren, ReactElement } from 'react';
 import Popover, { Align, ArrowContainer, Position } from 'react-tiny-popover';
 import styled from 'styled-components/macro';
 
-export const Menu = styled('div')`
+export const PopoverMenuMenu = styled('div')`
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   background: #fff;
   border-radius: 3px;
@@ -11,7 +11,7 @@ export const Menu = styled('div')`
   overflow: scroll;
 `;
 
-export const Item = styled('div')<{ active?: boolean }>`
+export const PopoverMenuItem = styled('div')<{ active?: boolean }>`
   padding: 15px;
   border-bottom: 1px solid #f0f0f0;
   :last-child {
