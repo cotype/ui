@@ -7,7 +7,7 @@ export default {
   argTypes: {
     src: {
       control: 'text',
-      defaultValue: '/example.png',
+      defaultValue: 'example.png',
     },
     alt: {
       control: 'text',
