@@ -10,7 +10,8 @@
     "test": "npm run lint",
     "lint": "eslint . --ext .ts,.tsx",
     "lint-fix": "eslint . --ext .ts,.tsx --fix",
-    "storybook": "start-storybook -p 6006 -s public"
+    "storybook": "start-storybook -p 6006 -s storybookPublic",
+    "build-storybook": "build-storybook -s storybookPublic"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
@@ -20,7 +21,7 @@
   "dependencies": {
     "decorate-gh-pr": "^1.3.1"
   },
-  "peerDependencies": {
+  "perDependencies": {
     "react": ">=16",
     "react-dom": ">=16",
     "styled-components": ">=5"
@@ -42,6 +43,9 @@
     "prettier": "^2.2.1",
     "semantic-release": "^17.3.9",
     "semantish-prerelease": "^3.1.1",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "styled-components": "^5.2.1"
   }
 }
