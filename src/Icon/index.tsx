@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ComponentPropsWithRef, FC } from 'react';
 
 export type Props = React.SVGProps<SVGSVGElement> & {
   path: string;
-  ref?: any;
+  ref?: ComponentPropsWithRef<'svg'>;
 };
 
-export function Icon({ path, ...props }: Props) {
+export const Icon: FC<Props> = ({ path, ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ export function Icon({ path, ...props }: Props) {
       <path d={path} fill="currentColor" />
     </svg>
   );
-}
+};
 
 export const paths = {
   OpenInTab:
@@ -91,8 +91,8 @@ export const paths = {
 const internalIcons: { [index: string]: React.FC<Omit<Props, 'path'>> } = {};
 
 Object.entries(paths).forEach(([name, path]) => {
-  internalIcons[name] = (props: Omit<Props, 'path'>) => (
-    <Icon {...props} path={path} />
-  );
+  const x = (props: Omit<Props, 'path'>) => <Icon {...props} path={path} />;
+  x.displayName = name;
+  internalIcons[name] = x;
 });
 export const icons = internalIcons;

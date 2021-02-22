@@ -1,10 +1,11 @@
-import React from 'react';
-import styled, { css } from 'styled-components/macro';
+import React, { FC } from 'react';
+import styled, { css, CSSProp } from 'styled-components/macro';
 
-import Icon from '../Icon';
+import { Icon } from '../Icon';
 
 type P = {
   light?: boolean;
+  css?: CSSProp;
 };
 const cssStyle = ({ light }: P) => css`
   cursor: pointer;
@@ -31,32 +32,26 @@ const cssStyle = ({ light }: P) => css`
     margin-left: 0.4em;
   }
 `;
-export const StyledButton = styled('button')`
-  ${(p: P) => cssStyle(p)}
+export const StyledButton = styled.button<P>`
+  ${(p) => cssStyle(p)}
 `;
-export const StyledLink = styled('a')`
-  ${(p: P) => cssStyle(p)}
+export const StyledLink = styled.a<P>`
+  ${(p) => cssStyle(p)}
   padding-top: 0;
   padding-bottom: 0;
 `;
 
 type Props = {
   icon?: string;
-  children?: any;
+  children?: React.ReactChildren;
   light?: boolean;
-  css?: any;
+  css?: CSSProp;
 } & (
   | (React.ButtonHTMLAttributes<HTMLButtonElement> & { asLink?: false })
   | (React.AnchorHTMLAttributes<HTMLAnchorElement> & { asLink: true })
 );
 
-export default function Button({
-  icon,
-  children,
-  asLink,
-  css: style,
-  ...props
-}: Props) {
+export const Button: FC<Props> = ({ icon, children, css: style, ...props }) => {
   const renderMutualContent = (
     <>
       {icon && <Icon path={icon} />}
@@ -64,13 +59,13 @@ export default function Button({
     </>
   );
 
-  return asLink ? (
-    <StyledLink css={style} {...(props as any)}>
+  return 'asLink' in props && props.asLink === true ? (
+    <StyledLink css={style} {...props}>
       {renderMutualContent}
     </StyledLink>
   ) : (
-    <StyledButton type="button" css={style} {...(props as any)}>
+    <StyledButton type="button" css={style} {...props}>
       {renderMutualContent}
     </StyledButton>
   );
-}
+};
