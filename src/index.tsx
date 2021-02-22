@@ -4,3 +4,6 @@ export * from './Button';
 export * from './Icon';
 export * from './StatusLight';
 export * from './ToggleSwitch';
+export * from './ImageCircle';
+export * from './PopoverMenu';
+export * from './ProgressCircle';

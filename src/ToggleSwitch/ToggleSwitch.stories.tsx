@@ -9,6 +9,10 @@ export default {
       control: { type: 'boolean' },
       defaultValue: true,
     },
+    disabled: {
+      control: { type: 'boolean' },
+      defaultValue: false,
+    },
   },
 };
 
@@ -20,10 +24,13 @@ const FlexCol = styled.div`
   }
 `;
 
-export const Default: FC<{ isOn: boolean }> = ({ isOn }) => (
+export const Default: FC<{ isOn: boolean; disabled: boolean }> = ({
+  isOn,
+  disabled,
+}) => (
   <FlexCol>
     <div>
-      <ToggleSwitch on={isOn} />
+      <ToggleSwitch on={isOn} disabled={disabled} />
     </div>
   </FlexCol>
 );
