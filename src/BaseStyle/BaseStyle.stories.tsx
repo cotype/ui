@@ -25,10 +25,8 @@ export const Default: FC<{
   text?: string;
   light?: boolean;
 }> = ({ text, icon, light }) => (
-  <FlexCol>
-    <div>
-      <div>BaseStyle:</div>
-      <textarea readOnly>{baseStyleCss}</textarea>
-    </div>
-  </FlexCol>
+  <>
+    <div>BaseStyle:</div>
+    <textarea readOnly>{baseStyleCss}</textarea>
+  </>
 );

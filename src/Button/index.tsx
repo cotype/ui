@@ -43,7 +43,6 @@ export const StyledLink = styled.a<P>`
 
 type Props = {
   icon?: string;
-  children?: React.ReactChildren;
   light?: boolean;
   css?: CSSProp;
 } & (

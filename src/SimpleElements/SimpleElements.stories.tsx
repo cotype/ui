@@ -16,7 +16,6 @@ export default {
 const FlexCol = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
   > * {
     margin-bottom: 20px;
   }
