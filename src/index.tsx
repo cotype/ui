@@ -7,3 +7,5 @@ export * from './ToggleSwitch';
 export * from './ImageCircle';
 export * from './PopoverMenu';
 export * from './ProgressCircle';
+export * from './DatePicker';
+export * from './ChipList';
