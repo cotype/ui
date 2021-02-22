@@ -1,16 +1,24 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import {
-  SimpleButton,
-  SimpleError,
-  SimpleField,
-  SimpleInput,
-  SimpleLabel,
-} from './index';
+import { Button } from './index';
 
 export default {
-  title: 'Common / SimpleElements',
+  title: 'Common / Button',
+  argTypes: {
+    icon: {
+      control: 'text',
+      defaultValue: 'M14 10h7v4h-7v7h-4v-7H3v-4h7V3h4z',
+    },
+    text: {
+      control: 'text',
+      defaultValue: 'Text',
+    },
+    light: {
+      control: 'boolean',
+      defaultValue: false,
+    },
+  },
 };
 
 const FlexCol = styled.div`
@@ -22,17 +30,22 @@ const FlexCol = styled.div`
   }
 `;
 
-export const Default: FC = () => (
+export const Default: FC<{
+  icon?: string;
+  text?: string;
+  light?: boolean;
+}> = ({ text, icon, light }) => (
   <FlexCol>
     <div>
-      <SimpleField>
-        <SimpleLabel>SimpleLabel</SimpleLabel>
-        <SimpleInput />
-        <SimpleError>Error</SimpleError>
-      </SimpleField>
+      <Button icon={icon} light={light}>
+        {text}
+      </Button>
     </div>
     <div>
-      <SimpleButton>Button</SimpleButton>
+      <div>As Link:</div>
+      <Button icon={icon} light={light} asLink href={'/'} target={'_blank'}>
+        {text}
+      </Button>
     </div>
   </FlexCol>
 );

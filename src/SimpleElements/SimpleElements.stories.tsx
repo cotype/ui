@@ -27,8 +27,8 @@ export const Default: FC = () => (
     <div>
       <SimpleField>
         <SimpleLabel>SimpleLabel</SimpleLabel>
-        <SimpleInput />
-        <SimpleError>Error</SimpleError>
+        <SimpleInput defaultValue={'SimpleInput'} />
+        <SimpleError>SimpleError</SimpleError>
       </SimpleField>
     </div>
     <div>

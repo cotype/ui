@@ -1,3 +1,4 @@
 export * from './BaseStyle';
-export * from './Test';
 export * from './SimpleElements';
+export * from './Button';
+export * from './Icon';
