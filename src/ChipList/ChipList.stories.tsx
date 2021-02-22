@@ -17,7 +17,12 @@ export const Default: FC<{ noColor?: boolean }> = ({ noColor }) => {
     setValues,
   ]);
   const removeValue = useCallback(
-    (index) => setValues((v) => v.slice(index, -1)),
+    (index) =>
+      setValues((v) => {
+        const arr = [...v];
+        arr.splice(index, 1);
+        return arr;
+      }),
     [setValues],
   );
   return (
