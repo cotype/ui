@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { DatePicker } from './index';
+import { TimeInput } from './index';
 
 export default {
-  title: 'Common / DatePicker',
+  title: 'Common / TimeInput',
   argTypes: {
     value: {
       control: { type: 'text' },
-      defaultValue: '10.01.2021',
+      defaultValue: '10:15',
     },
     placeholder: {
       control: { type: 'text' },
@@ -19,5 +19,5 @@ export const Default: FC<{ value: string; placeholder: string }> = ({
   value,
   placeholder,
 }) => {
-  return <DatePicker value={value} placeholder={placeholder} />;
+  return <TimeInput value={value} placeholder={placeholder} />;
 };
