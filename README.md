@@ -23,6 +23,8 @@ The system itself is not concerned with the actual rendering of the data - this 
 
 This is the ui package for the cotype admin dashboard.
 
+Component Overview: https://cotype.github.io/ui
+
 ---
 
 > Cotype is not free software.  
@@ -38,8 +40,7 @@ This is the ui package for the cotype admin dashboard.
 ## Usage
 
 ```ts
-// server.ts
-import { init, Opts /* ... */ } from "@cotype/ui";
+import { Button, buttonClass, ... } from "@cotype/ui";
 
 ```
 
@@ -50,6 +51,3 @@ Pull-Requests, Issues, Feedback, Coffee and positive thoughts are very welcome!
 If you want to work on this project locally using the development environment
 or want to know more about what we consider "internal stuff", please refer
 to the [contribution guidelines](https://github.com/cotype/core/blob/master/CONTRIBUTING.md)
-
-
-

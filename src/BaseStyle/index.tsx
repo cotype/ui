@@ -1,6 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-
-export const BaseStyle = createGlobalStyle`
+import { createGlobalStyle, css } from 'styled-components/macro';
+export const baseStyleCss = css`
   body,
   html,
   #root {
@@ -10,8 +9,8 @@ export const BaseStyle = createGlobalStyle`
   }
 
   html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     font-size: 14.4px;
     font-weight: 400;
     line-height: 1.5;
@@ -74,4 +73,7 @@ export const BaseStyle = createGlobalStyle`
   select option {
     font-weight: normal;
   }
+`;
+export const BaseStyle = createGlobalStyle`
+  ${baseStyleCss}
 `;
