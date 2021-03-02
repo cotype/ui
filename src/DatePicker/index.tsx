@@ -5,7 +5,7 @@ import React, { Component, ReactElement } from 'react';
 import { DayModifiers } from 'react-day-picker';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import MomentLocaleUtils from 'react-day-picker/moment';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 import { inputClass } from '../SimpleElements';
 

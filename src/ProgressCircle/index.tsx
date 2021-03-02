@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
-import { createGlobalStyle } from 'styled-components/macro';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 .circlePath{

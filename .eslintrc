@@ -2,7 +2,5 @@
   "root": true,
   "extends": "cellular",
   "rules": {
-    "import/no-unresolved": 0,
-    "import/named": 0
   }
 }

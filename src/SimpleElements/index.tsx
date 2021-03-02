@@ -1,4 +1,5 @@
-import styled, { css, CSSProp } from 'styled-components/macro';
+// eslint-disable-next-line import/named
+import styled, { css, CSSProp } from 'styled-components';
 
 export const fieldGroupClass = css`
   box-sizing: border-box;
