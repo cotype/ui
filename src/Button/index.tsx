@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import styled, { css, CSSProp } from 'styled-components/macro';
+// eslint-disable-next-line import/named
+import { css, CSSProp } from 'styled-components';
+import styled from 'styled-components/macro';
 
 import { Icon } from '../Icon';
 

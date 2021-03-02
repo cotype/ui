@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import { css } from 'styled-components/macro';
+import { css } from 'styled-components';
 
 import { SimpleInput } from '../SimpleElements';
 
