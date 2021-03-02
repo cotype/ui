@@ -1,6 +1,6 @@
 import ColorHash from 'color-hash';
 import React, { Component, ReactElement } from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 import { Button, icons, paths, SimpleInput } from '../';
 import { testable } from '../util/helper';

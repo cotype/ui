@@ -1,6 +1,6 @@
 import ColorHash from 'color-hash';
 import React, { FC } from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 const colorHash = new ColorHash({ saturation: 0.7, lightness: 0.6 });
 
 const Circle = styled.div`
